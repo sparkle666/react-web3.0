@@ -1,7 +1,15 @@
+import {Loader, Footer, Welcome, Services, Transactions, Navbar } from "./components"
+
 const App = () => {
   return (
-    <div className="font-bold text-4xl m-[2em] text-red-600 underline">
-      Hello World
+    <div className = "min-h-screen">
+      <div className="gradient-bg-welcome">
+        <Navbar />
+        <Welcome />
+      </div>
+      <Services />
+      <Transactions />
+      <Footer />
     </div>
   );
 };
