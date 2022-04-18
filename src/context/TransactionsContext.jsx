@@ -1,9 +1,9 @@
-import {React, useState, useEffect } from "react"
+import React, {useState, useEffect, createContext } from "react"
 import {contractABI} from "../utils/constants"
 import {contractAddress} from "../utils/constants"
 import {ethers} from "ethers"
 
-export const TransactionsContext = React.createContext();
+export const TransContext = createContext();
 
 const {ethereum} = window;
 
@@ -21,9 +21,9 @@ const getEthereumContract = () => {
 
 export const TransactionProvider = ({children}) => {
     return(
-            <TransactionsContext.Provider value = {{name: "james"}}> 
+            <TransContext.Provider value = {{name: "james"}}> 
                 {children}
-            </TransactionsContext.Provider>
+            </TransContext.Provider>
     )
 }
 
